@@ -1,0 +1,21 @@
+.LoadMore {
+  text-transform: uppercase;
+    font-family: CallingCode;
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 0;
+    background-color: #FFFFFF;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 2.1px;
+    margin: 32px 0;
+    cursor: pointer;
+    box-shadow: none;
+    &:hover {
+      background-color: #000000;
+      color: #FFFFFF;
+    }
+}
