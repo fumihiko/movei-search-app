@@ -1,4 +1,3 @@
-import './SearchResults.scss'
 import MovieList from '../MovieList'
 
 const SearchResults = props => {
