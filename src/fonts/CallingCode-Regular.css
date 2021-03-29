@@ -1,0 +1,12 @@
+/* Webfont: CallingCode-Regular */@font-face {
+    font-family: 'CallingCode';
+    src: url('CallingCode-Regular.eot'); /* IE9 Compat Modes */
+    src: url('CallingCode-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('CallingCode-Regular.woff') format('woff'), /* Modern Browsers */
+         url('CallingCode-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('CallingCode-Regular.svg#CallingCode-Regular') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
