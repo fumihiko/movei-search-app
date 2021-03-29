@@ -10,7 +10,8 @@ const MovieList = props => {
       {
         hasResults  ? props.movieList.map(movie => {
           return (
-            <Movie title={movie.title}
+            <Movie key={movie.id}
+                   title={movie.title}
                    base_url={props.configuration.images.secure_base_url}
                    poster={movie.poster_path}
                    release_date={movie.release_date}

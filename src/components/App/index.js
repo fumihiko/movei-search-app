@@ -22,17 +22,14 @@ const App = () => {
   const search = (term, page=1) => {
     THEMOVIEDB.configure().then(configuration => {
       setConfiguration(configuration)
-      console.log(configuration)
     })
     setLoading(true)
     THEMOVIEDB.search(term, page=1).then(searchResults => {
-      
       setSearchResults(searchResults)
       setCurrentPage(searchResults.page)
       setTotalPages(searchResults.total_pages)
       setMovieList(searchResults.results)
       setLoading(false)
-      console.log(searchResults)
     })
   }
 
@@ -42,14 +39,12 @@ const App = () => {
 
   const loadMore = (term, page) => {
     setMoreLoading(true)
-    THEMOVIEDB.search(term, page).then(searchResults => {
-      
+    THEMOVIEDB.search(term, page).then(searchResults => { 
       setCurrentPage(searchResults.page)
       let nextMovieList = searchResults.results
       let newMovieList = [...movieList, ...nextMovieList]
       setMovieList(newMovieList)
       setMoreLoading(false)
-     console.log(searchResults)
     })
   }
 

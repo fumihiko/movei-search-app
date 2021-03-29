@@ -3,8 +3,6 @@ import './LoadMore.scss'
 const LoadMore = props => {
 
   const handelClick = (event) => {
-    console.log('clicked!')
-    console.log(`Termn: ${props.term} CurrentPage: ${props.currentPage}`)
     props.loadMore(props.term, props.currentPage +1)
   }
 

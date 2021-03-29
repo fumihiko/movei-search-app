@@ -6,7 +6,7 @@ const DEFAULT_POSTER = 'https://via.placeholder.com/500x750/999999/FFFFFF/?text=
 const PosterFrame = props => {
   return (
     <div className="poster-frame">
-            <img src= {`${props.base_url}w500${props.poster_path}`} />
+            <img src= {`${props.base_url}w500${props.poster_path}`} alt={props.title} />
     </div>
   )
 }
@@ -14,7 +14,7 @@ const PosterFrame = props => {
 const PosterFrameNoImage = () => {
   return (
     <div className="poster-frame">
-            <img src={DEFAULT_POSTER} alt="No Image Available"/>
+            <img src={DEFAULT_POSTER} alt="No poster Available"/>
     </div>
   )
 }
@@ -22,7 +22,7 @@ const PosterFrameNoImage = () => {
 
 const Movie = props => {
   const poster =
-    props.poster === null ? <PosterFrameNoImage   /> : <PosterFrame base_url={props.base_url} poster_path={props.poster} />
+    props.poster === null ? <PosterFrameNoImage   /> : <PosterFrame title={props.title} base_url={props.base_url} poster_path={props.poster} />
   
   
     const extractYear = (str) => {
