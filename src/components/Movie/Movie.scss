@@ -1,0 +1,57 @@
+@mixin aspect-ratio($pnidth, $pneight) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($pneight / $pnidth) * 100%;
+  }
+}
+
+.Movie {
+  //max-width: 650px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  padding: 8px;
+}
+
+.movie-information {
+  text-align: left;
+
+  h2 {
+    
+    font-size: 1.5rem;
+    font-family: 'CircularBold';
+    margin-bottom: 8px;
+  }
+  small {
+    font-family: 'CallingCode';
+    font-size: 1rem;
+  }
+  p {
+    margin-top: 8px;
+    --max-lines: 3;
+  max-height: calc(var(--lh) * var(--max-lines));
+  overflow: hidden;
+  }
+}
+
+.poster-frame {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Movie {
+    max-width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .Movie {
+    max-width: 33%;
+  }
+}
